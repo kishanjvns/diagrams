@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.0">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.0" pages="2">
   <diagram name="food-delivery" id="VwoK2Dneakf-Rgd1Az4X">
     <mxGraphModel dx="1875" dy="1523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -147,6 +147,131 @@
         </mxCell>
         <mxCell id="AlQOQ8CkK4YLBXgS55oU-66" edge="1" parent="1" source="AlQOQ8CkK4YLBXgS55oU-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.004;entryY=0.051;entryDx=0;entryDy=0;entryPerimeter=0;" target="AlQOQ8CkK4YLBXgS55oU-56">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="8CJeGa5pHfm8x-S4_Mte" name="notification">
+    <mxGraphModel dx="786" dy="423" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="U4amIJPpKe3PCDWCsf00-11" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="U4amIJPpKe3PCDWCsf00-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-12" connectable="0" parent="U4amIJPpKe3PCDWCsf00-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;create appointment&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2308" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="40" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-15" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="U4amIJPpKe3PCDWCsf00-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="appointment sysem" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-14" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="" vertex="1">
+          <mxGeometry height="90" width="120" x="240" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;save user appointment,&lt;br&gt;and save notification payload through outbox pattern&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="140" x="240" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-23" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="U4amIJPpKe3PCDWCsf00-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-26" connectable="0" parent="U4amIJPpKe3PCDWCsf00-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Publish to Kafka" vertex="1">
+          <mxGeometry relative="1" x="-0.3333" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Debezium, read the outbox table ,and post notification content to notification kafka broker" vertex="1">
+          <mxGeometry height="90" width="130" x="540" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-20" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.983;entryY=0.267;entryDx=0;entryDy=0;entryPerimeter=0;" target="U4amIJPpKe3PCDWCsf00-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-27" connectable="0" parent="U4amIJPpKe3PCDWCsf00-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Read outbox table" vertex="1">
+          <mxGeometry relative="1" x="0.2537" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-22" parent="1" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.kafka;" value="" vertex="1">
+          <mxGeometry height="42" width="56.699999999999996" x="841.65" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Kafka" vertex="1">
+          <mxGeometry height="30" width="40" x="850" y="376" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-28" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="1480" width="1480" x="960" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;rounded=0;" value="{&lt;div&gt;notififactionType: APPOINTMENT_CREATED,&lt;/div&gt;&lt;div&gt;notificationContent: {&lt;/div&gt;&lt;div&gt;recipientName: Mark henry,&lt;/div&gt;&lt;div&gt;email: mark@gmail.com,&lt;/div&gt;&lt;div&gt;contact_number: 1234556789,&lt;/div&gt;&lt;div&gt;appointment_schedule: 2025/12/29 17:46 PM IST,&lt;/div&gt;&lt;div&gt;doctor_name: Mike toshua&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="270" x="1005" y="266" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-31" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.074;entryY=0.614;entryDx=0;entryDy=0;entryPerimeter=0;" target="U4amIJPpKe3PCDWCsf00-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-32" connectable="0" parent="U4amIJPpKe3PCDWCsf00-31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;notifcation consumed&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.4245" y="-3" as="geometry">
+            <mxPoint x="35" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-33" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; NotificationHandler&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; - ItemplateEngine templateEngine;&lt;/div&gt;&lt;div&gt;&amp;nbsp; - List&amp;lt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;INotificationProcessor&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;gt; notificationProcessors;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ handle(String payload) {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;iterate on Notification Processor&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;call templateEngine.parse(type, map)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;based on above string response call the processor.process(string)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="260" x="980" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-37" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="U4amIJPpKe3PCDWCsf00-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-44" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.422;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;" target="U4amIJPpKe3PCDWCsf00-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1440" y="640" />
+              <mxPoint x="1650" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ITemplateEngine&lt;br&gt;&lt;br&gt;&lt;br&gt;+ parse(NotificationType type,Map&amp;lt;String,String&amp;gt; content): string {&lt;div&gt;&amp;nbsp;// fetch all template based on Notificaiton Type from databse, eg if NotificationType is APPOINTMENT_CREATED then go and fetch all the template from the database which will bring string template and type (email type template, sms type template or poptype template)&lt;br&gt;&lt;br&gt;then call that type of template&#39;s render method and return&amp;nbsp;&lt;/div&gt;&lt;div&gt;}&lt;div&gt;&lt;br&gt;+ render(Map&amp;lt;String,String&amp;gt; content): string&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="260" width="300" x="1290" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-51" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="U4amIJPpKe3PCDWCsf00-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-52" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="U4amIJPpKe3PCDWCsf00-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-53" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="U4amIJPpKe3PCDWCsf00-49">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="630" />
+              <mxPoint x="2315" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; INotificationProcessor&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ process(String content)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="220" x="1950" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;SMSTemplate&lt;div&gt;&lt;br&gt;+ render(Map&amp;lt;String,String&amp;gt; content): string {}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="185" x="1170" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;EmailTemplate&lt;div&gt;&lt;br&gt;+ render(Map&amp;lt;String,String&amp;gt; content): string {}&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="1380" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; SMSTemplate&lt;/span&gt;&lt;div&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;+ render(Map&amp;lt;String,String&amp;gt; content): string {}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="1570" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-43" edge="1" parent="1" source="U4amIJPpKe3PCDWCsf00-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.361;entryY=-0.039;entryDx=0;entryDy=0;entryPerimeter=0;" target="U4amIJPpKe3PCDWCsf00-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;SMSNotificationProcessor&lt;div&gt;&lt;br&gt;&lt;span style=&quot;text-align: center;&quot;&gt;+ process(String content) {}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="185" x="1820" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;EmailNotificationProcessor&lt;div&gt;&lt;br&gt;+&amp;nbsp;&lt;span style=&quot;text-align: center; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;process(String content) {}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="160" x="2030" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="U4amIJPpKe3PCDWCsf00-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;" value="&lt;span style=&quot;text-align: center;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; SMS&lt;/span&gt;NotificationProcessor&lt;div&gt;&lt;br style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;+ process(String content) {}&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="190" x="2220" y="670" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
