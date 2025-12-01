@@ -197,7 +197,7 @@
           <mxGeometry height="42" width="56.699999999999996" x="781.65" y="358" as="geometry" />
         </mxCell>
         <mxCell id="U4amIJPpKe3PCDWCsf00-28" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
-          <mxGeometry height="1650" width="1650" x="890" y="30" as="geometry" />
+          <mxGeometry height="1990" width="1990" x="890" y="30" as="geometry" />
         </mxCell>
         <mxCell id="U4amIJPpKe3PCDWCsf00-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;rounded=0;" value="{&lt;div&gt;notififactionType: APPOINTMENT_CREATED,&lt;/div&gt;&lt;div&gt;notificationContent: {&lt;/div&gt;&lt;div&gt;recipientName: Mark henry,&lt;/div&gt;&lt;div&gt;email: mark@gmail.com,&lt;/div&gt;&lt;div&gt;contact_number: 1234556789,&lt;/div&gt;&lt;div&gt;appointment_schedule: 2025/12/29 17:46 PM IST,&lt;/div&gt;&lt;div&gt;doctor_name: Mike toshua&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" vertex="1">
           <mxGeometry height="140" width="270" x="905" y="50" as="geometry" />
